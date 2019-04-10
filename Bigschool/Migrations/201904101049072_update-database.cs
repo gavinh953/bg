@@ -7,6 +7,8 @@ namespace Bigschool.Migrations
     {
         public override void Up()
         {
+
+
             DropForeignKey("dbo.courses", "lecturer_Id", "dbo.AspNetUsers");
             DropIndex("dbo.courses", new[] { "lecturer_Id" });
             RenameColumn(table: "dbo.courses", name: "lecturer_Id", newName: "LecturerId");
