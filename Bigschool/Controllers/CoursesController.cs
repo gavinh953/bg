@@ -18,10 +18,10 @@ namespace Bigschool.Controllers
             _dbContext = new ApplicationDbContext();
         }
         // GET: Courses
-      
+         [Authorize]
         public ActionResult Create()
         {
-            var viewModel = new CourseViewModel
+               var viewModel = new CourseViewModel
             {
                 Categories = _dbContext.Categories.ToList()
             };
@@ -39,7 +39,7 @@ namespace Bigschool.Controllers
             }
             var course = new course
             {
-                Lecturer = User.Identity.GetUserId(),
+                LecturerId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
                 CategoryID = viewModel.Category,
                 Place = viewModel.Place
