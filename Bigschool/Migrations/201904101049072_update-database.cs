@@ -5,6 +5,8 @@ namespace Bigschool.Migrations
     
     public partial class updatedatabase : DbMigration
     {
+
+
         public override void Up()
         {
 
