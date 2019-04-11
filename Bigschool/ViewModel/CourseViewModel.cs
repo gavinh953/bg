@@ -25,6 +25,6 @@ namespace Bigschool.ViewModel
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
     }
-
+    // 
     
 }
